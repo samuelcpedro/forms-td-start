@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -7,6 +7,9 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  @ViewChild('f') signupForm: NgForm;
+
   suggestUserName() {
     const suggestedName = 'Superuser';
   }
@@ -18,9 +21,9 @@ export class AppComponent {
   // will return this
   // <form _ngcontent-c0="" novalidate="" class="ng-valid ng-dirty ng-touched">...</form>
 
-  onSubmit(form: NgForm) {
-    console.log('Submitted!', form);
-  }
+  // onSubmit(form: NgForm) {
+  //   console.log('Submitted!', form);
+  // }
   // Will return this
   // NgForm {submitted: true, _directives: Array(3), ngSubmit: EventEmitter, form: FormGroup}
 
@@ -30,4 +33,9 @@ export class AppComponent {
   //     secret: "teacher"
   //     username: "name value"
   //
+
+  onSubmit() {
+    console.log('Submitted!', this.signupForm);
+  }
+
 }
