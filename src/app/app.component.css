@@ -1,3 +1,21 @@
 .container {
   margin-top: 30px;
 }
+
+/* It will put the border in the form and the input element */
+/* 
+  .ng-invalid {
+    border: 1px solid red;
+  } 
+*/
+
+/* It will put the style from the begining */
+/* 
+input.ng-invalid, select.ng-invalid {
+  border: 1px solid red;
+}  */
+
+
+input.ng-invalid.ng-touched, select.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
