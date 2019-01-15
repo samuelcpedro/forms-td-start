@@ -72,6 +72,8 @@ export class AppComponent {
     this.user.secretQuestion = this.signupForm.value.secret;
     this.user.answer = this.signupForm.value.questionAnswer;
     this.user.gender = this.signupForm.value.gender;
+    /* It will clean form an put the form as if we reload the page */
+    this.signupForm.reset();
   }
 
 }
